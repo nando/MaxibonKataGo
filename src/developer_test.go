@@ -7,7 +7,7 @@ import (
   "github.com/leanovate/gopter/prop"
 )
 
-func Test_DeveloperPositiveGrabbing(t *testing.T) {
+func TestDeveloperProperties(t *testing.T) {
   parameters := gopter.DefaultTestParameters()
   parameters.MinSuccessfulTests = 10000
   properties := gopter.NewProperties(parameters)
@@ -19,6 +19,15 @@ func Test_DeveloperPositiveGrabbing(t *testing.T) {
       return ( developer.maxibonsToGrab() >= 0 )
     },
     gen.Int(),
+  ))
+
+  properties.Property("Developer should assign the name of the developer in 'construction'", prop.ForAll(
+    func(name string) bool {
+      developer := Developer{ name, 0 }
+
+      return ( developer.name == name )
+    },
+    gen.AlphaString(),
   ))
 
   properties.TestingRun(t)
