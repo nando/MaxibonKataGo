@@ -1,6 +1,8 @@
 ![The Cocktail logo][tcklogo] ❤ ![Karumi logo][karumilogo]
 # Kata Maxibon for Go. [![Build Status](https://travis-ci.org/nando/MaxibonKataGo.svg?branch=master)](https://travis-ci.org/nando/MaxibonKataGo)
 
+**DISCLAIMER: Work in progress.**
+
 - We are here to practice [property based testing][property-based-testing].
 - We are going to use [rapid][rapid] to write our tests.
 - We are going to practice pair programming.
