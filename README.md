@@ -2,7 +2,7 @@
 # Kata Maxibon for Go. [![Build Status](https://travis-ci.org/nando/MaxibonKataGo.svg?branch=master)](https://travis-ci.org/nando/MaxibonKataGo)
 
 - We are here to practice [property based testing][property-based-testing].
-- We are going to use [Gopter][gopter] to write our tests.
+- We are going to use [rapid][rapid] to write our tests.
 - We are going to practice pair programming.
 
 During this kata we will try to find how to use property based testing from different points of view:
@@ -36,7 +36,7 @@ When a Karumi engineer goes to the kitchen, they can go in group if needed, and 
 Your task as Go Developer is to resolve this problem or test an already implemented software, depending on the path you have choosen before to start.
 
 * If you want to practice TDD write a little piece of software to implement the already described scenario following the TDD cycle.
-* If you don not want to follow the TDD path create an empty project, add the [Gopter][gopter] gem as a dependency and start writing code. 
+* If you don not want to follow the TDD path create an empty project, add the [rapid][rapid] gem as a dependency and start writing code. 
 * If you prefer to just learn how to use [property based testing][property-based-testing] you can use this repository just checkout to the branch ``write-tests``.
 
 ## Extra tasks:
@@ -67,7 +67,7 @@ limitations under the License.
 [karumilogo]: https://cloud.githubusercontent.com/assets/858090/11626547/e5a1dc66-9ce3-11e5-908d-537e07e82090.png
 [tcklogo]: https://avatars0.githubusercontent.com/u/1177560?s=40
 [property-based-testing]: http://es.slideshare.net/ScottWlaschin/an-introduction-to-property-based-testing
-[gopter]: https://github.com/leanovate/gopter
+[rapid]: https://github.com/flyingmutant/rapid
 [maxibon]: ./art/maxibon.jpg
 [tdd]: https://en.wikipedia.org/wiki/Test-driven_development
 
