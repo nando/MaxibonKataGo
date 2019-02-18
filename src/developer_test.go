@@ -24,3 +24,21 @@ func TestDeveloperProperties(t *testing.T) {
     }
   }, rapid.Strings())
 }
+
+// Test #3: should assign the number of maxibons specified to every developer.
+func Test_the_number_of_maxibons_specified_to_every_developer(t *testing.T) {
+  developers := Developers()
+  maxibons := make(map[string]int)
+  maxibons[ "pedro" ]  = 3
+  maxibons[ "fran" ]   = 1
+  maxibons[ "davide" ] = 0
+  maxibons[ "sergio" ] = 2
+  maxibons[ "jorge" ]  = 1
+  for key, dev := range developers {
+    if dev.maxibonsToGrab() != maxibons[ key ] {
+      t.Fatalf("developer %s should grab %d maxibons.\n",
+               developers[ key ].name,
+               maxibons[ key ])
+    }
+  }
+}
