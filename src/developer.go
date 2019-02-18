@@ -1,4 +1,4 @@
-package developer
+package maxibonkata
 
 import( "math" )
 
