@@ -26,4 +26,17 @@ func TestKarumiHQsProperties(t *testing.T) {
       t.Fatalf("should always has more than two maxibons in the fridge.")
     }
   }, rapid.IntsRange(0, 42))
+
+  // Property #3: should buy 10 more maxibons if there are less than 3 in the fridge
+  rapid.Check( t, func( t *rapid.T, maxibons_to_grab int ) {
+    hqs := NewKarumiHQs( "The Cocktail DF" )
+    developer := Developer{ "Frida", maxibons_to_grab }
+
+    hqs.openFridge( developer )
+
+    if hqs.maxibonsLeft() < 10 {
+      t.Fatalf("should buy 10 more maxibons if there are less than 3 in the fridge.")
+    }
+  }, rapid.IntsRange(8, 42))
+
 }
