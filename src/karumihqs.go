@@ -8,6 +8,7 @@ func KarumiHQs_BUY_MAXIBONS() int { return 10 }
 type KarumiHQs struct {
   name string
   maxibons_left int
+  melting_maxibons int
 }
 
 func NewKarumiHQs( name string ) (karumihqs KarumiHQs) {
@@ -30,14 +31,18 @@ func ( hqs *KarumiHQs ) openFridge( dev Developer ) int {
   return hqs.maxibons_left
 }
 
+func ( hqs *KarumiHQs ) meltingMaxibons() int {
+  return hqs.melting_maxibons
+}
+
 func ( hqs *KarumiHQs ) grabMaxibons( dev Developer ) int {
   hqs.maxibons_left = int( math.Max( +0,
                                      float64( hqs.maxibons_left - dev.maxibonsToGrab())))
-
   return hqs.maxibons_left
 }
 
 func ( hqs *KarumiHQs ) buyMaxibons() int {
+  hqs.melting_maxibons = hqs.maxibons_left
   hqs.maxibons_left =+ KarumiHQs_BUY_MAXIBONS()
 
   return hqs.maxibons_left

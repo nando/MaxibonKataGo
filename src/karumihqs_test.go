@@ -39,4 +39,16 @@ func TestKarumiHQsProperties(t *testing.T) {
     }
   }, rapid.IntsRange(8, 42))
 
+  // Property #4: maxibons above BUY_MAXIBONS are melting maxibons
+  rapid.Check( t, func( t *rapid.T, maxibons_to_grab int ) {
+    hqs := NewKarumiHQs( "The Cocktail Santiago" )
+    developer := Developer{ "Violeta", maxibons_to_grab }
+
+    hqs.openFridge( developer )
+
+    if hqs.meltingMaxibons() == 0 {
+      t.Fatalf("maxibons above BUY_MAXIBONS should be melting maxibons.")
+    }
+  }, rapid.IntsRange(8, 9)) // => buy_maxibons() ==> 1 or 2 melting...
+
 }
