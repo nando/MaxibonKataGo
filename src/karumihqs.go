@@ -9,6 +9,7 @@ type KarumiHQs struct {
 	name string
 	maxibons_left int
 	melting_maxibons int
+	melted_maxibons int
 }
 
 func NewKarumiHQs( name string ) (karumihqs KarumiHQs) {
@@ -33,6 +34,10 @@ func ( hqs *KarumiHQs ) openFridge( dev Developer ) int {
 
 func ( hqs *KarumiHQs ) meltingMaxibons() int {
 	return hqs.melting_maxibons
+}
+
+func ( hqs *KarumiHQs ) meltedMaxibons() int {
+	return hqs.melted_maxibons
 }
 
 func ( hqs *KarumiHQs ) grabMaxibons( dev Developer ) int {

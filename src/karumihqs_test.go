@@ -50,4 +50,18 @@ func TestKarumiHQsProperties(t *testing.T) {
 			t.Fatalf("maxibons above BUY_MAXIBONS should be melting maxibons.")
 		}
 	}, rapid.IntsRange(8, 9)) // => buy_maxibons() ==> 1 or 2 melting...
+
+	// Property #5: melted maxibons accumulate melting maxibons
+	rapid.Check( t, func( t *rapid.T, maxibons_to_grab int ) {
+		hqs := NewKarumiHQs( "The Cocktail Madrid" )
+		agustina := Developer{ "Agustina Ruiz Dupont", maxibons_to_grab }
+
+		hqs.openFridge( agustina ) // 1st => 1 or 2 melting...
+		hqs.openFridge( agustina ) // 2st => 0, 1 or 2 melting... any (potentialy) melted?
+		hqs.openFridge( agustina ) // 3rd => we should have (potentialy) melted maxibons.
+
+		if hqs.meltedMaxibons() == 0 {
+			t.Fatalf("melted maxibons should accumulate melting maxibons.")
+		}
+	}, rapid.IntsRange(8, 9))
 }
