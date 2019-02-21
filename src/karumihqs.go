@@ -49,6 +49,7 @@ func ( hqs *KarumiHQs ) grabMaxibons( dev Developer ) int {
 func ( hqs *KarumiHQs ) buyMaxibons() int {
 	hqs.melting_maxibons = hqs.maxibons_left
 	hqs.maxibons_left =+ KarumiHQs_BUY_MAXIBONS()
+	hqs.melted_maxibons =+ hqs.melting_maxibons
 
 	return hqs.maxibons_left
 }
