@@ -27,7 +27,7 @@ func TestDeveloperProperties(t *testing.T) {
 
 // Test #3: should assign the number of maxibons specified to every developer.
 func Test_the_number_of_maxibons_specified_to_every_developer(t *testing.T) {
-	developers := Developers()
+	developers := MakeDevelopers()
 	maxibons := make(map[string]int)
 
 	maxibons[ "pedro" ]  = 3

@@ -11,7 +11,7 @@ func (dev Developer) maxibonsToGrab() int {
 	return int( math.Max( +0, float64(dev.maxibons_to_grab )))
 }
 
-func Developers() (developers map[ string ]Developer) {
+func MakeDevelopers() (developers map[ string ]Developer) {
 	developers = make( map[string]Developer )
 	// Karumi's
 	developers[ "pedro" ]  = Developer{ "Pedro", 3 }
