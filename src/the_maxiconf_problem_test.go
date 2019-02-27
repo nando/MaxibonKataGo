@@ -8,7 +8,7 @@ import (
 	"github.com/flyingmutant/rapid"
 )
 
-const MAX_MELTED_MAXIBONS int = 2
+const MAX_MELTED_MAXIBONS int = 1
 
 // theMaxiconf keeps track of the maxibons enjoyed by the attendants
 // (Developer instances) at the venue (KarumiHQs instance).
