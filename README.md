@@ -1,8 +1,6 @@
 ![The Cocktail logo][tcklogo] ❤ ![Karumi logo][karumilogo]
 # Kata Maxibon for Go. [![Build Status](https://travis-ci.org/nando/MaxibonKataGo.svg?branch=master)](https://travis-ci.org/nando/MaxibonKataGo)
 
-**DISCLAIMER: Work in progress.**
-
 - We are here to practice [property based testing][property-based-testing].
 - We are going to use [rapid][rapid] to write our tests.
 - We are going to practice pair programming.
@@ -33,12 +31,28 @@ Karumi developers can consume zero or a positive number of maxibons. The Karumi 
 
 When a Karumi engineer goes to the kitchen, they can go in group if needed, and there are just 2 maxibons or less left he has to send a message through the Slack API saying ``"Hi guys, I'm <NAME OF THE DEVELOPER>. We need more maxibons!"``. And the number of maxibons available will be automatically incremented by 10 :). If the number of maxibons left is lower than the number of maxibons the developer tries to get he will get just the number of maxibons available.
 
+### The Maxiconf Problem (aka The Kataclack!!)
+
+Karumi & The Cocktail plot in the near future the celebration of the Maxiconf, a conference that emerges from some of their employees fascination with previous Maxibon's kata).
+
+The conference will have tiny freezer with space for 10 maxibons only. Sadly, maxibons above that figure will be slowly melting in the fridge waiting for the next gourmand!!
+
+A new order asking for more maxibons will be sent as soon as freezer's maxibons drop below 3 maxibons.
+
+In order to avoid any maxibon melting in the fridge we have a not-so-complicated master plan:
+
+1.- We'll asign a **MDT** (_Maxibon Delivery Turn_) to each assistant,
+2.- Each assistant's _MDT_ number will be placed into her/his _Welcome Pack_,
+3.- Current turn will be projected at some corner of the venue's screen continously throughout the event.
+
+Will we be able to deliver no melting maxibons? Only god knows!! xDDD
+
 ## Tasks
 
 Your task as Go Developer is to resolve this problem or test an already implemented software, depending on the path you have choosen before to start.
 
 * If you want to practice TDD write a little piece of software to implement the already described scenario following the TDD cycle.
-* If you don not want to follow the TDD path create an empty project, add the [rapid][rapid] gem as a dependency and start writing code. 
+* If you don not want to follow the TDD path create an empty project, add the [rapid][rapid] gem as a dependency and start writing code.
 * If you prefer to just learn how to use [property based testing][property-based-testing] you can use this repository just checkout to the branch ``write-tests``.
 
 ## Extra tasks:
@@ -64,4 +78,3 @@ with this file you can obtain one at https://mozilla.org/MPL/2.0/.
 [rapid]: https://github.com/flyingmutant/rapid
 [maxibon]: ./art/maxibon.jpg
 [tdd]: https://en.wikipedia.org/wiki/Test-driven_development
-
