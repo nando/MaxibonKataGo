@@ -2,8 +2,8 @@ package maxibonkata
 
 import( "math" )
 
-func KarumiHQs_MIN_MAXIBONS() int { return 3 }
-func KarumiHQs_BUY_MAXIBONS() int { return 10 }
+const MIN_MAXIBONS int = 3
+const BUY_MAXIBONS int = 10
 
 type KarumiHQs struct {
 	name string
@@ -18,25 +18,25 @@ func NewKarumiHQs( name string ) (karumihqs KarumiHQs) {
 	return
 }
 
-func ( hqs *KarumiHQs ) maxibonsLeft() int {
+func ( hqs *KarumiHQs ) MaxibonsLeft() int {
 	return hqs.maxibons_left
 }
 
-func ( hqs *KarumiHQs ) openFridge( dev Developer ) int {
+func ( hqs *KarumiHQs ) OpenFridge( dev Developer ) int {
 	hqs.grabMaxibons( dev )
 
-	if hqs.maxibons_left < KarumiHQs_MIN_MAXIBONS() {
+	if hqs.maxibons_left < MIN_MAXIBONS {
 		hqs.buyMaxibons()
 	}
 
 	return hqs.maxibons_left
 }
 
-func ( hqs *KarumiHQs ) meltingMaxibons() int {
+func ( hqs *KarumiHQs ) MeltingMaxibons() int {
 	return hqs.melting_maxibons
 }
 
-func ( hqs *KarumiHQs ) meltedMaxibons() int {
+func ( hqs *KarumiHQs ) MeltedMaxibons() int {
 	return hqs.melted_maxibons
 }
 
@@ -48,7 +48,7 @@ func ( hqs *KarumiHQs ) grabMaxibons( dev Developer ) int {
 
 func ( hqs *KarumiHQs ) buyMaxibons() int {
 	hqs.melting_maxibons = hqs.maxibons_left
-	hqs.maxibons_left =+ KarumiHQs_BUY_MAXIBONS()
+	hqs.maxibons_left =+ BUY_MAXIBONS
 	hqs.melted_maxibons =+ hqs.melting_maxibons
 
 	return hqs.maxibons_left

@@ -10,7 +10,7 @@ func TestKarumiHQsProperties(t *testing.T) {
 	rapid.Check( t, func( t *rapid.T, name string ) {
 		hqs := NewKarumiHQs( name )
 
-		if hqs.maxibonsLeft() != 10 {
+		if hqs.MaxibonsLeft() != 10 {
 			t.Fatalf("new KarumiHQs instances should start the day with 10 maxibons.")
 		}
 	}, rapid.Strings())
@@ -20,9 +20,9 @@ func TestKarumiHQsProperties(t *testing.T) {
 		hqs := NewKarumiHQs( "The Cocktail Oviedo" )
 		developer := Developer{ "Ada", maxibons_to_grab }
 
-		hqs.openFridge( developer )
+		hqs.OpenFridge( developer )
 
-		if hqs.maxibonsLeft() < 3 {
+		if hqs.MaxibonsLeft() < 3 {
 			t.Fatalf("should always has more than two maxibons in the fridge.")
 		}
 	}, rapid.IntsRange(0, 42))
@@ -32,9 +32,9 @@ func TestKarumiHQsProperties(t *testing.T) {
 		hqs := NewKarumiHQs( "The Cocktail DF" )
 		developer := Developer{ "Frida", maxibons_to_grab }
 
-		hqs.openFridge( developer )
+		hqs.OpenFridge( developer )
 
-		if hqs.maxibonsLeft() < 10 {
+		if hqs.MaxibonsLeft() < 10 {
 			t.Fatalf("should buy 10 more maxibons if there are less than 3 in the fridge.")
 		}
 	}, rapid.IntsRange(8, 42))
@@ -44,9 +44,9 @@ func TestKarumiHQsProperties(t *testing.T) {
 		hqs := NewKarumiHQs( "The Cocktail Santiago" )
 		developer := Developer{ "Violeta", maxibons_to_grab }
 
-		hqs.openFridge( developer )
+		hqs.OpenFridge( developer )
 
-		if hqs.meltingMaxibons() == 0 {
+		if hqs.MeltingMaxibons() == 0 {
 			t.Fatalf("maxibons above BUY_MAXIBONS should be melting maxibons.")
 		}
 	}, rapid.IntsRange(8, 9)) // => buy_maxibons() ==> 1 or 2 melting...
@@ -56,11 +56,11 @@ func TestKarumiHQsProperties(t *testing.T) {
 		hqs := NewKarumiHQs( "The Cocktail Madrid" )
 		agustina := Developer{ "Agustina Ruiz Dupont", maxibons_to_grab }
 
-		hqs.openFridge( agustina ) // 1st => 1 or 2 melting...
-		hqs.openFridge( agustina ) // 2st => 0, 1 or 2 melting... any (potentialy) melted?
-		hqs.openFridge( agustina ) // 3rd => we should have (potentialy) melted maxibons.
+		hqs.OpenFridge( agustina ) // 1st => 1 or 2 melting...
+		hqs.OpenFridge( agustina ) // 2st => 0, 1 or 2 melting... any (potentialy) melted?
+		hqs.OpenFridge( agustina ) // 3rd => we should have (potentialy) melted maxibons.
 
-		if hqs.meltedMaxibons() == 0 {
+		if hqs.MeltedMaxibons() == 0 {
 			t.Fatalf("melted maxibons should accumulate melting maxibons.")
 		}
 	}, rapid.IntsRange(8, 9))
