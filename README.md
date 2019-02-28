@@ -31,19 +31,19 @@ Karumi developers can consume zero or a positive number of maxibons. The Karumi 
 
 When a Karumi engineer goes to the kitchen, they can go in group if needed, and there are just 2 maxibons or less left he has to send a message through the Slack API saying ``"Hi guys, I'm <NAME OF THE DEVELOPER>. We need more maxibons!"``. And the number of maxibons available will be automatically incremented by 10 :). If the number of maxibons left is lower than the number of maxibons the developer tries to get he will get just the number of maxibons available.
 
-### The Maxiconf Problem (aka The Kataclack!!)
+### The Maxiconf Problem
 
-Karumi & The Cocktail plot in the near future the celebration of the Maxiconf, a conference that emerges from some of their employees fascination with previous Maxibon's kata).
+Karumi & The Cocktail plot in the near future the celebration of the Maxiconf, a conference that emerges from some of their employees fascination with previous Maxibon's kata.
 
-The conference will have tiny freezer with space for 10 maxibons only. Sadly, maxibons above that figure will be slowly melting in the fridge waiting for the next gourmand!!
+The conference will have tiny freezer with space for 10 maxibons only. Sadly, maxibons above that number will be slowly melting in the fridge waiting for the next gourmand!!
 
 A new order asking for more maxibons will be sent as soon as freezer's maxibons drop below 3 maxibons.
 
 In order to avoid any maxibon melting in the fridge we have a not-so-complicated master plan:
 
-1.- We'll asign a **MDT** (_Maxibon Delivery Turn_) to each assistant,
-2.- Each assistant's _MDT_ number will be placed into her/his _Welcome Pack_,
-3.- Current turn will be projected at some corner of the venue's screen continously throughout the event.
+1. We'll asign a **MDT** (_Maxibon Delivery Turn_) to each assistant,
+2. Each assistant's _MDT_ number will be placed into her/his _Welcome Pack_,
+3. Current turn will be projected at some corner of the venue's screen continously throughout the event.
 
 Will we be able to deliver no melting maxibons? Only god knows!! xDDD
 
