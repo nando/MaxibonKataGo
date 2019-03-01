@@ -35,15 +35,26 @@ When a Karumi engineer goes to the kitchen, they can go in group if needed, and 
 
 Karumi & The Cocktail plot in the near future the celebration of the Maxiconf, a conference that emerges from some of their employees fascination with previous Maxibon's kata.
 
+The Cocktail's engineers invited to the _"sweet"_ event will be the following:
+
+* Nuria, who'll grab three maxibons.
+* Fausto, who'll grab two maxibons.
+* Julia, who won't grab any maxibon.
+* Luismi, who'll grab three maxibons.
+* Susana, who'll grab two maxibons.
+* Sahu, who'll grab one maxibon.
+* Vero, who'll grab three maxibons.
+* Vito, who'll grab three maxibons.
+
 The conference will have tiny freezer with space for 10 maxibons only. Sadly, maxibons above that number will be slowly melting in the fridge waiting for the next gourmand!!
 
 A new order asking for more maxibons will be sent as soon as freezer's maxibons drop below 3 maxibons.
 
 In order to avoid any maxibon melting in the fridge we have a not-so-complicated master plan:
 
-1. We'll asign a **MDT** (_Maxibon Delivery Turn_) to each assistant,
+1. We'll asign a **_MDT_** (_Maxibon Delivery Turn_) number to each assistant,
 2. Each assistant's _MDT_ number will be placed into her/his _Welcome Pack_,
-3. Current turn will be projected at some corner of the venue's screen continously throughout the event.
+3. Current **turn will be projected** at some corner of the venue's screen continously throughout the event.
 
 Will we be able to deliver no melting maxibons? Only god knows!! xDDD
 
